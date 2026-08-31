@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bab 3 - formulir dan multimedia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #1a5276;
+        }
+        h2 {
+            color: #2e86c1;
+            border-bottom: 2px solid #aed6f1;
+            padding-bottom: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"], 
+        input[type="number"], input[type="date"], input[type="tell"],
+        textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="reset"] {
+            margin-top: 16px;
+            padding: 10px 24px;
+            background-color: #2e86c1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #bdc3c7;
+        }
+        fieldset {
+            border: 2px solid #aed6f1;
+            border-radius: 30px;
+            margin-top: 20px;
+            padding: 16px;
+        }
+        legend {
+            font-weight: bold;
+            color: #1a5276;
+            padding: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulir Pendaftaran Siswa</h1>
+</body>
+</html>
+<form action="#" method="POST">
+
+    <fieldset>
+        <legend>data pribadi</legend>
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama"
+               placeholder="masukan nama lengkap" required maxlength="100">
+
+        <label for="nis">NIS: (nomor induk siswa)</label>
+        <input type="number" id="nis" name="nis"
+               placeholder="contoh 2024001" required>
+
+        <label for="email">alamat email:</label>
+        <input type="email" id="email" name="email" 
+               placeholder="contoh@gmail.com" required>
+
+        <label for="telp">nomor telepon:</label>
+        <input type="telp" id="telp" name="telp"
+               placeholder="08xxxxxxxxxx">
+
+        <label for="tgl_lahir">tanggal lahir:</label>
+        <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+
+        <password for="password">password:</label>
+        <input type="password" id="password" name="password"
+               placeholder="minimal 8 karakter" required minlength="8">
+    </fieldset>
+    <fieldset>
+        <legend>data akademi</legend>
+         
+        <label for="kelamin">kelamin:</label>
+        <div style="margin-top: 6px;">
+            <input type="radio" id="laki laki" name="gender" value="L" required>
+            <label for="laki laki" style="display: inline; font-weight: normal;">laki laki</label>
+
+            &nbsp;&nbsp;
+            <input type="radio" id="perembuan" name="gemder" value="P" required>
+            <label for="perempuan" style="display: inline; font-weight: normal;">perempuan</label>
+        </div>
+
+        <label for="jurusan">jurusan: </label>
+        <select name="jurusan" id="jurusan" required>
+            <option value="">--pilihh jurusan--</option>
+            <option value="rpl">Rekayasa perangkat lunak (RPL)</option>
+            <option value="tkj">Teknil komputer dan jaringan (TKJ)</option>
+            <option value="mm">Multimedia (MM)</option>
+            <option value="ak">Akutansi (AK)</option>
+        </select>
+
+        <label>Hobi  (boleh lebih satu):</label>
+        <div style="margin-top: 6px;">
+            <input type="checkbox" id="h_coding" name="hobi" value="coding">
+            <label for="h_coding" style="display: inline; font-weight: normal;">coding</label>&nbsp;&nbsp;
+
+            <input type="checkbox" id="h_desain" name="hobi" value="desain">
+            <label for="h_desain" style="display: inline; font-weight: normal;">desain</label>&nbsp;&nbsp;
+
+            <input type="checkbox" id="h_musik" name="hobi" value="musik">
+            <label for="h_musik" style="display: inline; font-weight: normal;">musik</label>&nbsp;&nbsp;
+
+            <input type="checkbox" id="h_olahraga" name="hobi" value="musik">
+            <label for="h_olahraga" style="display: inline; font-weight: normal;">olahraga</label>
+        </div>
+
+        <label for="foto">upload foto (maks. 2mb):</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+    </fieldset>
+
+    <fieldset>
+        <legend>informasi tambahan</legend>
+
+        <label for="alamat">alamat lengkap: </label>
+        <textarea name="alamat" id="alamat" rows="4"
+                placeholder="JL. .... RT/RW. .... KELURAHAN. .... KECAMATAN. .... KOTA. ....">
+        </textarea>
+
+        <label for="alasan">Alasan Memilih Jurusan</label>
+        <textarea name="alasan" id="alasan" rows="5"
+                placeholder="Ceritakan mengapa kamu memilih jurusan tersebut....">
+    </textarea>
+
+        <label for="kepuasan">Tingkat kepuasan layanan (1-10)</label>
+        <input type="range" id="kepuasan" name="kepuasan" min="1" max="10" value="5">
+
+        <!-- checkbox persetujuan -->
+         <div style="margin-top: 16px;">
+            <input type="checkbox" name="setuju" id="setuju" value="ya" required>
+            <label for="setuju" style="display: inline; font-weight: normal;">
+                Saya menyatakan bahwa data yang saya isi adalah benar dan dapat pertanggungjawabkan.
+            </label>
+         </div>
+    </fieldset>
+
+    <!-- tobol sumbit dan reset -->
+     <input type="submit" value="daftar sekarang">
+     <input type="reset" value="hapus semua isian">
+
+
+</form>
+
+<h2>Multimedia</h2>
+
+<!-- audio ganti nama file depan dengan file audio kamu, atau hapus bagian ini -->
+<h3>audio paling best</h3>
+<audio controls src="audio.mp3" type="audio/mp3" style="width: 100%;"></audio>
+
+<!-- vidio: ganti file vidio dengan file fidio mu-->
+ <h3>Vidio profil</h3>
+ <video controls src="vidio.mp4" type="vidio/mp4" title="vidio profil" style="width: 100%; max-width: 640px;">
+ </video>
+
+ <!-- vidio tutorial html dari you tube-->
+  <h3>Vidio tutorial html (Youtube)</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0oA1Z6UKM5M?si=0IMEDKkAUFb9vGmm" 
+  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <!-- google maps via iframe-->
+   <h3>Lokasi SMK TJP Tuban</h3>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5111.036345313609!2d112.0503772!3d-6.8996652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77a2aa2e02e583%3A0xb530f7140a4b9327!2sSMK%20Taruna%20Jaya%20Prawira!5e1!3m2!1sid!2sid!4v1788187203213!5m2!1sid!2sid" 
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
