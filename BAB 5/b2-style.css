@@ -1,0 +1,31 @@
+
+/* contoh penggunaan display */
+
+/* Membuat <a> (inline) menjadi block agar bisa diatur ukurannya */
+nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1A5276;
+    color: white;
+    text-decoration: none; /* Tambahan agar garis bawah link hilang */
+}
+/* Membuat <li> (block) menjadi inline untuk navbar horizontal */
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+/* Menyembunyikan elemen */
+.tersembunyi { display: none; }        /* Hilang dari layout */
+.transparan  { visibility: hidden; }   /* Hilang tapi ruangnya tetap ada */
+
+/* --- KODE CSS TAMBAHAN UNTUK DEMO --- */
+nav ul {
+    padding: 0; /* Menghilangkan padding bawaan ul */
+}
+
+.kotak-demo {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
