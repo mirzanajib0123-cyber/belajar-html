@@ -1,0 +1,102 @@
+    /* Reset & Base Styling Opsional */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f7;
+        color: #333;
+        padding-top: 20px;
+    }
+    /* ===== PROPERTI DASAR RESPONSIF ===== */
+    /* max-width: elemen tidak akan lebih lebar dari nilai ini */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;     /* Rata tengah di layar lebar */
+        padding: 0 20px;
+    }
+    /* min-width: elemen tidak akan lebih sempit dari nilai ini */
+    .tombol {
+        min-width: 120px;
+        padding: 10px 20px;
+        background-color: #1A5276;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    /* ===== MEDIA QUERY ===== */
+    /* Mobile First: tulis CSS untuk mobile dulu, */
+    /* lalu tambah untuk layar yang lebih besar */
+    /* Default (mobile) */
+    .kartu-wrapper {
+        display: flex;
+        flex-direction: column; /* Kartu tersusun vertikal di mobile */
+        gap: 16px;
+    }
+    /* Sidebar tersembunyi secara default di mobile */
+    .sidebar {
+        display: none;
+        background: #e0e0e0;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    /* Styling kartu dasar */
+    .kartu {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    /* Header & Navbar Styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        background: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+    }
+    .navbar-menu ul {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+    }
+    .navbar-menu a {
+        text-decoration: none;
+        color: #1A5276;
+        font-weight: bold;
+    }
+    /* Tablet ke atas (>= 768px) */
+    @media (min-width: 768px) {
+        .kartu-wrapper {
+            flex-direction: row; /* Kartu tersusun horizontal di tablet */
+            flex-wrap: wrap;
+        }
+        .kartu {
+            flex: 0 0 calc(50% - 8px); /* 2 kolom */
+        }
+    }
+    /* Desktop (>= 1024px) */
+    @media (min-width: 1024px) {
+        .kartu {
+            flex: 0 0 calc(33.333% - 12px); /* 3 kolom */
+        }
+        .sidebar { 
+            display: block; /* Tampilkan sidebar di desktop */
+        } 
+    }
+    /* Khusus mobile (max-width: 767px) */
+    @media (max-width: 767px) {
+        .navbar-menu { 
+            display: none; /* Sembunyikan menu di mobile */
+        } 
+        h1 { 
+            font-size: 1.8rem; 
+        }
+    }
