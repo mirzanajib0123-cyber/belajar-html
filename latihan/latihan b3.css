@@ -1,0 +1,139 @@
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 30px;
+  }
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 30px;
+  }
+  /* --- Styling Formulir --- */
+  .form-group {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 12px;
+  }
+  label {
+    display: inline-block;
+    width: 160px;
+    font-weight: bold;
+    color: #334155;
+    vertical-align: top;
+  }
+  .input-area {
+    display: inline-block;
+    width: calc(100% - 170px);
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  input[type="url"],
+  input[type="file"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .keterangan {
+    font-size: 0.85em;
+    color: #64748b;
+    margin-top: 5px;
+    display: block;
+  }
+  fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  legend {
+    font-weight: bold;
+    color: #1e293b;
+    padding: 0 8px;
+  }
+  .buttons {
+    margin-top: 25px;
+    text-align: center;
+  }
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 10px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    margin: 0 5px;
+  }
+  input[type="submit"] {
+    background-color: #4b6cb7;
+    color: white;
+  }
+  input[type="reset"] {
+    background-color: #e2e8f0;
+    color: #475569;
+  }
+  /* --- Styling Media Audio & Video --- */
+  .media-box {
+    margin-bottom: 20px;
+  }
+  audio,
+  video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  /* --- Styling Tabel --- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+  }
+  th {
+    background-color: #4b6cb7;
+    color: white;
+    font-weight: 600;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  tr:hover {
+    background-color: #f1f5f9;
+  }
+  code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #c0392b;
+  }

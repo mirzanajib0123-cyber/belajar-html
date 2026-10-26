@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mengulas latihan bab 3</title>
+    <link rel="stylesheet" href="latihan b3.css" />
+  </head>
+  <body>
+    <center>
+    <h1>B. materi ringkas bab 3</h1>
+    <h2>B.1 formulir (form)</h2>
+    </center>
+
+    <br />
+
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>atribut</th>
+          <th>nilai</th>
+          <th>keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>action</td>
+          <td>URL</td>
+          <td>menentukan URL tujuan data dikirimkan/sumbit</td>
+        </tr>
+        <tr>
+          <td>method</td>
+          <td>get/post</td>
+          <td>
+            GET: data terlihat di url (untuk pencarian). POST: data tersembunyi
+            (untuk login)
+          </td>
+        </tr>
+        <tr>
+          <td>enctype</td>
+          <td>multipart/form-data</td>
+          <td>wajib ditambahkan jika from memiliki input file upload</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+
+    <!-- strukture dasar formulir-->
+    <center>
+        <h2>struktur dasar formulir</h2>
+    
+    <p>
+      formulir terdiri dari tag pembuka &lt;form&gt; dan tag penutup
+      &lt;/form&gt;
+    </p>
+    <p>
+      didalam tag &lt;form&gt; terdapat elemen input, textarea, select, button,
+      dsb
+    </p>
+    <p>elemen input memiliki atribut type yang menentukan jenis input</p>
+    <p>contoh :</p>
+    <pre>
+        &lt;form action="proses.php" method="post"&gt;
+        <!-- elemen input di letakkan di sini -->
+            &lt;input type="text" name="nama"&gt;
+
+            &lt;input type="submit" value="kirim"&gt;
+        &lt;/form&gt;
+    </pre>
+    </center>
+    <br />
+    <hr />
+    <br />
+
+    <center>
+        <h2>B.2 elemen input dan sejenisnya</h2>
+    </center>
+
+    <div class="container">
+      <!-- Bagian Formulir Input -->
+      <h2>1. Formulir Tipe Input</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <div class="input-area">
+            <input type="text" id="username" name="username" />
+            <span class="keterangan"
+              ><strong>type="text"</strong>: Kotak teks satu baris[cite:
+              1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="sandi">Kata Sandi:</label>
+          <div class="input-area">
+            <input type="password" id="sandi" name="sandi" />
+            <span class="keterangan"
+              ><strong>type="password"</strong>: Kotak teks dengan karakter
+              tersembunyi[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <div class="input-area">
+            <input type="email" id="email" name="email" />
+            <span class="keterangan"
+              ><strong>type="email"</strong>: Kotak teks + validasi format
+              email[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="usia">Usia:</label>
+          <div class="input-area">
+            <input type="number" id="usia" name="usia" />
+            <span class="keterangan"
+              ><strong>type="number"</strong>: Kotak angka dengan tombol
+              naik/turun[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="telepon">No. Telepon:</label>
+          <div class="input-area">
+            <input type="tel" id="telepon" name="telepon" />
+            <span class="keterangan"
+              ><strong>type="tel"</strong>: Kotak teks untuk nomor telepon[cite:
+              1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tgl_lahir">Tanggal Lahir:</label>
+          <div class="input-area">
+            <input type="date" id="tgl_lahir" name="tgl_lahir" />
+            <span class="keterangan"
+              ><strong>type="date"</strong>: Pemilih tanggal[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="jam">Jam:</label>
+          <div class="input-area">
+            <input type="time" id="jam" name="jam" />
+            <span class="keterangan"
+              ><strong>type="time"</strong>: Pemilih waktu[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="website">Website:</label>
+          <div class="input-area">
+            <input type="url" id="website" name="website" />
+            <span class="keterangan"
+              ><strong>type="url"</strong>: Kotak teks + validasi format
+              URL[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin:</label>
+          <div class="input-area">
+            <input type="radio" id="pria" name="gender" value="pria" />
+            <label for="pria" style="width: auto; font-weight: normal"
+              >Pria</label
+            >
+            <input type="radio" id="wanita" name="gender" value="wanita" />
+            <label for="wanita" style="width: auto; font-weight: normal"
+              >Wanita</label
+            >
+            <span class="keterangan"
+              ><strong>type="radio"</strong>: Tombol bulat (pilih satu)[cite:
+              1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Hobi:</label>
+          <div class="input-area">
+            <input type="checkbox" id="baca" name="hobi" value="membaca" />
+            <label for="baca" style="width: auto; font-weight: normal"
+              >Membaca</label
+            >
+            <input type="checkbox" id="olahraga" name="hobi" value="olahraga" />
+            <label for="olahraga" style="width: auto; font-weight: normal"
+              >Olahraga</label
+            >
+            <span class="keterangan"
+              ><strong>type="checkbox"</strong>: Kotak centang (bisa pilih
+              banyak)[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dokumen">Upload File:</label>
+          <div class="input-area">
+            <input type="file" id="dokumen" name="dokumen" />
+            <span class="keterangan"
+              ><strong>type="file"</strong>: Tombol pilih file[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <div class="input-area">
+            <input type="range" id="rating" name="rating" />
+            <span class="keterangan"
+              ><strong>type="range"</strong>: Slider geser[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="warna">Warna:</label>
+          <div class="input-area">
+            <input type="color" id="warna" name="warna" />
+            <span class="keterangan"
+              ><strong>type="color"</strong>: Pemilih warna[cite: 1].</span
+            >
+          </div>
+        </div>
+
+        <!-- Hidden Input -->
+        <input type="hidden" name="user_id" value="ID-99123" />
+
+        <!-- Bagian Form Elemen Kompleks (fieldset, select, textarea, datalist) -->
+        <fieldset>
+          <legend>Elemen Formulir Tambahan</legend>
+
+          <div class="form-group">
+            <label for="catatan">Pesan / Catatan:</label>
+            <div class="input-area">
+              <textarea
+                id="catatan"
+                name="catatan"
+                rows="3"
+                placeholder="Tuliskan pesan..."
+              ></textarea>
+              <span class="keterangan"
+                ><strong>&lt;textarea&gt;</strong>: Kotak teks multi-baris[cite:
+                2].</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="kota">Pilih Kota:</label>
+            <div class="input-area">
+              <select id="kota" name="kota">
+                <optgroup label="Pulau Jawa">
+                  <option value="jakarta">Jakarta</option>
+                  <option value="bandung">Bandung</option>
+                </optgroup>
+                <optgroup label="Pulau Sumatra">
+                  <option value="medan">Medan</option>
+                </optgroup>
+              </select>
+              <span class="keterangan"
+                ><strong>&lt;select&gt; &amp; &lt;optgroup&gt;</strong>:
+                Dropdown menu berserta pengelompokan opsi[cite: 2].</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="browser">Browser Favorit:</label>
+            <div class="input-area">
+              <input
+                type="text"
+                id="browser"
+                name="browser"
+                list="list-browser"
+                placeholder="Ketik atau pilih..."
+              />
+              <datalist id="list-browser">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Edge"></option>
+              </datalist>
+              <span class="keterangan"
+                ><strong>&lt;datalist&gt;</strong>: Memberikan saran
+                autocomplete pada input text[cite: 2].</span
+              >
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="buttons">
+          <input type="submit" value="Kirim Data" />
+          <input type="reset" value="Reset Form" />
+        </div>
+      </form>
+
+      <br />
+
+      <p>atribut-atribut penting pada elemen &lt;input&gt;:</p>
+
+      <ul>
+        <li>
+          name : nama field digunakan server untuk mengidentifikasi data yang
+          terkirim
+        </li>
+        <li>
+          value : penghubung dengan label (via atribut for pada &lt;label&gt;)
+        </li>
+        <li>
+          placeholder : teks petunjuk yang tampil saat input masih kosong kosong
+        </li>
+        <li>required : menandakan input wajib diisi sebelum form disubmit</li>
+        <li>
+          disabled : menonaktifkan input sehingga tidak dapat diubah atau diklik
+        </li>
+        <li>readonly : membuat input hanya bisa dibaca, tidak bisa diubah</li>
+        <li>
+          min/max : batas minimum dan maximum untuk input angka atau tanggal
+        </li>
+        <li>
+          maxlength : batas maksimum jumlah karakter yang dapat di ketik/li>
+        </li>
+      </ul>
+
+      <br />
+      <hr />
+      <br />
+
+      <h2>B.3 label, textarea, dan select</h2>
+
+      <!-- Implementasi Elemen Formulir -->
+      <h2>Contoh Formulir</h2>
+
+      <form action="#" method="POST">
+        <!-- <fieldset> & <legend> -->
+        <fieldset>
+          <legend>Data Tambahan</legend>
+
+          <!-- <label> & <textarea> -->
+          <p>
+            <label for="catatan">Pesan / Catatan:</label><br />
+            <textarea
+              id="catatan"
+              name="catatan"
+              rows="4"
+              cols="40"
+              placeholder="Tuliskan pesan Anda..."
+            ></textarea>
+          </p>
+
+          <!-- <select> & <optgroup> -->
+          <p>
+            <label for="kota">Pilih Kota:</label><br />
+            <select id="kota" name="kota">
+              <optgroup label="Pulau Jawa">
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+                <option value="surabaya">Surabaya</option>
+              </optgroup>
+              <optgroup label="Pulau Sumatra">
+                <option value="medan">Medan</option>
+                <option value="padang">Padang</option>
+              </optgroup>
+            </select>
+          </p>
+
+          <!-- <datalist> -->
+          <p>
+            <label for="browser">Browser Favorit:</label><br />
+            <input
+              type="text"
+              id="browser"
+              name="browser"
+              list="list-browser"
+              placeholder="Ketik atau pilih..."
+            />
+            <datalist id="list-browser">
+              <option value="Chrome"></option>
+              <option value="Firefox"></option>
+              <option value="Edge"></option>
+              <option value="Safari"></option>
+            </datalist>
+          </p>
+
+          <p>
+            <input type="submit" value="Kirim Data" />
+          </p>
+        </fieldset>
+      </form>
+
+      <hr />
+
+      <!-- Kode Tabel HTML -->
+      <h2>Tabel Keterangan Elemen</h2>
+
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Elemen</th>
+            <th>Fungsi</th>
+            <th>Keterangan Penting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;label&gt;</td>
+            <td>Memberikan keterangan pada elemen input</td>
+            <td>
+              Hubungkan ke input menggunakan atribut for yang nilainya sama
+              dengan id input — meningkatkan aksesibilitas
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;textarea&gt;</td>
+            <td>Kotak teks multi-baris</td>
+            <td>
+              Gunakan atribut rows dan cols untuk mengatur ukuran. Berbeda
+              dengan &lt;input&gt;, &lt;textarea&gt; punya tag pembuka dan
+              penutup
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;select&gt;</td>
+            <td>Membuat dropdown / menu pilihan</td>
+            <td>
+              Setiap pilihan dibuat dengan tag &lt;option&gt;. Tambahkan atribut
+              multiple untuk pilihan ganda
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;optgroup&gt;</td>
+            <td>Mengelompokkan opsi dalam dropdown</td>
+            <td>Gunakan atribut label untuk memberi nama grup</td>
+          </tr>
+          <tr>
+            <td>&lt;fieldset&gt;</td>
+            <td>Mengelompokkan elemen form terkait</td>
+            <td>
+              Gunakan bersama &lt;legend&gt; untuk memberi judul pada kelompok
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;datalist&gt;</td>
+            <td>Memberi saran/autocomplete pada input text</td>
+            <td>Hubungkan dengan input menggunakan atribut list</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+      <hr />
+      <br />
+
+      <h2>B4. audio dan video</h2>
+
+      <!-- Pemutar Audio -->
+      <div class="media-box">
+        <label>Pemutar Audio:</label>
+        <audio controls preload="metadata">
+          <source src="musik.mp3" type="audio/mpeg" />
+          <source src="musik.ogg" type="audio/ogg" />
+          Browser kamu tidak mendukung tag audio HTML5.
+        </audio>
+      </div>
+
+      <div class="media-box">
+        <label>Pemutar Video:</label>
+        <video
+          width="640"
+          height="360"
+          controls
+          poster="thumbnail.jpg"
+          preload="auto"
+        >
+          <source src="video.mp4" type="video/mp4" />
+          <source src="video.webm" type="video/webm" />
+          Browser kamu tidak mendukung tag video HTML5.
+        </video>
+      </div>
+
+      <!-- Bagian Tabel Atribut Media -->
+      <h2>3. Tabel Atribut Audio &amp; Video</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Atribut</th>
+            <th>Berlaku Pada</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>controls</code></td>
+            <td>audio, video</td>
+            <td>
+              Menampilkan kontrol putar/jeda/volume pada browser[cite: 3].
+            </td>
+          </tr>
+          <tr>
+            <td><code>autoplay</code></td>
+            <td>audio, video</td>
+            <td>
+              Media langsung diputar saat halaman dibuka (sering diblokir
+              browser)[cite: 3].
+            </td>
+          </tr>
+          <tr>
+            <td><code>loop</code></td>
+            <td>audio, video</td>
+            <td>Media diputar berulang-ulang tanpa henti[cite: 3].</td>
+          </tr>
+          <tr>
+            <td><code>muted</code></td>
+            <td>audio, video</td>
+            <td>
+              Media dimulai tanpa suara (diperlukan jika pakai autoplay)[cite:
+              3].
+            </td>
+          </tr>
+          <tr>
+            <td><code>poster</code></td>
+            <td>video</td>
+            <td>
+              Gambar thumbnail yang tampil sebelum video diputar[cite: 3].
+            </td>
+          </tr>
+          <tr>
+            <td><code>width / height</code></td>
+            <td>video</td>
+            <td>Ukuran tampilan video dalam piksel[cite: 3].</td>
+          </tr>
+          <tr>
+            <td><code>preload</code></td>
+            <td>audio, video</td>
+            <td>
+              Mengatur apakah media di-load otomatis: none / metadata /
+              auto[cite: 3].
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
