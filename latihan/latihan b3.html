@@ -1,84 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mengulas latihan bab 3</title>
+    <title>Mengulas Latihan Bab 3</title>
     <link rel="stylesheet" href="latihan b3.css" />
   </head>
   <body>
-    <center>
-    <h1>B. materi ringkas bab 3</h1>
-    <h2>B.1 formulir (form)</h2>
-    </center>
-
-    <br />
-
-    <table border="1" cellpadding="8" cellspacing="0">
-      <thead>
-        <tr>
-          <th>atribut</th>
-          <th>nilai</th>
-          <th>keterangan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>action</td>
-          <td>URL</td>
-          <td>menentukan URL tujuan data dikirimkan/sumbit</td>
-        </tr>
-        <tr>
-          <td>method</td>
-          <td>get/post</td>
-          <td>
-            GET: data terlihat di url (untuk pencarian). POST: data tersembunyi
-            (untuk login)
-          </td>
-        </tr>
-        <tr>
-          <td>enctype</td>
-          <td>multipart/form-data</td>
-          <td>wajib ditambahkan jika from memiliki input file upload</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <br />
-
-    <!-- strukture dasar formulir-->
-    <center>
-        <h2>struktur dasar formulir</h2>
     
-    <p>
-      formulir terdiri dari tag pembuka &lt;form&gt; dan tag penutup
-      &lt;/form&gt;
-    </p>
-    <p>
-      didalam tag &lt;form&gt; terdapat elemen input, textarea, select, button,
-      dsb
-    </p>
-    <p>elemen input memiliki atribut type yang menentukan jenis input</p>
-    <p>contoh :</p>
-    <pre>
-        &lt;form action="proses.php" method="post"&gt;
-        <!-- elemen input di letakkan di sini -->
-            &lt;input type="text" name="nama"&gt;
+    <div class="top-section">
+      <h1>B. materi ringkas bab 3</h1>
+      
+      <h2 class="section-title">B.1 formulir (form)</h2>
+      
+      <table class="top-table">
+        <thead>
+          <tr>
+            <th>atribut</th>
+            <th>nilai</th>
+            <th>keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>action</td>
+            <td>URL</td>
+            <td>menentukan URL tujuan data dikirimkan/sumbit</td>
+          </tr>
+          <tr>
+            <td>method</td>
+            <td>get/post</td>
+            <td>
+              GET: data terlihat di url (untuk pencarian). POST: data tersembunyi
+              (untuk login)
+            </td>
+          </tr>
+          <tr>
+            <td>enctype</td>
+            <td>multipart/form-data</td>
+            <td>wajib ditambahkan jika form memiliki input file upload</td>
+          </tr>
+        </tbody>
+      </table>
 
-            &lt;input type="submit" value="kirim"&gt;
-        &lt;/form&gt;
-    </pre>
-    </center>
-    <br />
-    <hr />
-    <br />
+      <h2 class="section-title">struktur dasar formulir</h2>
+      <p>formulir terdiri dari tag pembuka &lt;form&gt; dan tag penutup &lt;/form&gt;</p>
+      <p>didalam tag &lt;form&gt; terdapat elemen input, textarea, select, button, dsb</p>
+      <p>elemen input memiliki atribut type yang menentukan jenis input</p>
+      <p>contoh :</p>
+      
+      <pre>
+&lt;form action="proses.php" method="post"&gt;
+&lt;!-- elemen input di letakkan di sini --&gt;
+    &lt;input type="text" name="nama"&gt;
 
-    <center>
-        <h2>B.2 elemen input dan sejenisnya</h2>
-    </center>
+    &lt;input type="submit" value="kirim"&gt;
+&lt;/form&gt;</pre>
 
+      <h2 class="section-title">B.2 elemen input dan sejenisnya</h2>
+    </div>
+
+    <!-- Bagian Kontainer Formulir -->
     <div class="container">
-      <!-- Bagian Formulir Input -->
       <h2>1. Formulir Tipe Input</h2>
       <form action="#" method="POST">
         <div class="form-group">
@@ -86,8 +69,7 @@
           <div class="input-area">
             <input type="text" id="username" name="username" />
             <span class="keterangan"
-              ><strong>type="text"</strong>: Kotak teks satu baris[cite:
-              1].</span
+              ><strong>type="text"</strong>: Kotak teks satu baris.</span
             >
           </div>
         </div>
@@ -98,7 +80,7 @@
             <input type="password" id="sandi" name="sandi" />
             <span class="keterangan"
               ><strong>type="password"</strong>: Kotak teks dengan karakter
-              tersembunyi[cite: 1].</span
+              tersembunyi.</span
             >
           </div>
         </div>
@@ -109,7 +91,7 @@
             <input type="email" id="email" name="email" />
             <span class="keterangan"
               ><strong>type="email"</strong>: Kotak teks + validasi format
-              email[cite: 1].</span
+              email.</span
             >
           </div>
         </div>
@@ -120,7 +102,7 @@
             <input type="number" id="usia" name="usia" />
             <span class="keterangan"
               ><strong>type="number"</strong>: Kotak angka dengan tombol
-              naik/turun[cite: 1].</span
+              naik/turun.</span
             >
           </div>
         </div>
@@ -130,8 +112,7 @@
           <div class="input-area">
             <input type="tel" id="telepon" name="telepon" />
             <span class="keterangan"
-              ><strong>type="tel"</strong>: Kotak teks untuk nomor telepon[cite:
-              1].</span
+              ><strong>type="tel"</strong>: Kotak teks untuk nomor telepon.</span
             >
           </div>
         </div>
@@ -141,7 +122,7 @@
           <div class="input-area">
             <input type="date" id="tgl_lahir" name="tgl_lahir" />
             <span class="keterangan"
-              ><strong>type="date"</strong>: Pemilih tanggal[cite: 1].</span
+              ><strong>type="date"</strong>: Pemilih tanggal.</span
             >
           </div>
         </div>
@@ -151,7 +132,7 @@
           <div class="input-area">
             <input type="time" id="jam" name="jam" />
             <span class="keterangan"
-              ><strong>type="time"</strong>: Pemilih waktu[cite: 1].</span
+              ><strong>type="time"</strong>: Pemilih waktu.</span
             >
           </div>
         </div>
@@ -162,7 +143,7 @@
             <input type="url" id="website" name="website" />
             <span class="keterangan"
               ><strong>type="url"</strong>: Kotak teks + validasi format
-              URL[cite: 1].</span
+              URL.</span
             >
           </div>
         </div>
@@ -179,8 +160,7 @@
               >Wanita</label
             >
             <span class="keterangan"
-              ><strong>type="radio"</strong>: Tombol bulat (pilih satu)[cite:
-              1].</span
+              ><strong>type="radio"</strong>: Tombol bulat (pilih satu).</span
             >
           </div>
         </div>
@@ -198,7 +178,7 @@
             >
             <span class="keterangan"
               ><strong>type="checkbox"</strong>: Kotak centang (bisa pilih
-              banyak)[cite: 1].</span
+              banyak).</span
             >
           </div>
         </div>
@@ -208,7 +188,7 @@
           <div class="input-area">
             <input type="file" id="dokumen" name="dokumen" />
             <span class="keterangan"
-              ><strong>type="file"</strong>: Tombol pilih file[cite: 1].</span
+              ><strong>type="file"</strong>: Tombol pilih file.</span
             >
           </div>
         </div>
@@ -218,7 +198,7 @@
           <div class="input-area">
             <input type="range" id="rating" name="rating" />
             <span class="keterangan"
-              ><strong>type="range"</strong>: Slider geser[cite: 1].</span
+              ><strong>type="range"</strong>: Slider geser.</span
             >
           </div>
         </div>
@@ -228,7 +208,7 @@
           <div class="input-area">
             <input type="color" id="warna" name="warna" />
             <span class="keterangan"
-              ><strong>type="color"</strong>: Pemilih warna[cite: 1].</span
+              ><strong>type="color"</strong>: Pemilih warna.</span
             >
           </div>
         </div>
@@ -241,25 +221,24 @@
           <legend>Elemen Formulir Tambahan</legend>
 
           <div class="form-group">
-            <label for="catatan">Pesan / Catatan:</label>
+            <label for="catatan_tambahan">Pesan / Catatan:</label>
             <div class="input-area">
               <textarea
-                id="catatan"
-                name="catatan"
+                id="catatan_tambahan"
+                name="catatan_tambahan"
                 rows="3"
                 placeholder="Tuliskan pesan..."
               ></textarea>
               <span class="keterangan"
-                ><strong>&lt;textarea&gt;</strong>: Kotak teks multi-baris[cite:
-                2].</span
+                ><strong>&lt;textarea&gt;</strong>: Kotak teks multi-baris.</span
               >
             </div>
           </div>
 
           <div class="form-group">
-            <label for="kota">Pilih Kota:</label>
+            <label for="kota_asal">Pilih Kota:</label>
             <div class="input-area">
-              <select id="kota" name="kota">
+              <select id="kota_asal" name="kota_asal">
                 <optgroup label="Pulau Jawa">
                   <option value="jakarta">Jakarta</option>
                   <option value="bandung">Bandung</option>
@@ -270,29 +249,29 @@
               </select>
               <span class="keterangan"
                 ><strong>&lt;select&gt; &amp; &lt;optgroup&gt;</strong>:
-                Dropdown menu berserta pengelompokan opsi[cite: 2].</span
+                Dropdown menu berserta pengelompokan opsi.</span
               >
             </div>
           </div>
 
           <div class="form-group">
-            <label for="browser">Browser Favorit:</label>
+            <label for="browser_fav">Browser Favorit:</label>
             <div class="input-area">
               <input
                 type="text"
-                id="browser"
-                name="browser"
-                list="list-browser"
+                id="browser_fav"
+                name="browser_fav"
+                list="list-browser-fav"
                 placeholder="Ketik atau pilih..."
               />
-              <datalist id="list-browser">
+              <datalist id="list-browser-fav">
                 <option value="Chrome"></option>
                 <option value="Firefox"></option>
                 <option value="Edge"></option>
               </datalist>
               <span class="keterangan"
                 ><strong>&lt;datalist&gt;</strong>: Memberikan saran
-                autocomplete pada input text[cite: 2].</span
+                autocomplete pada input text.</span
               >
             </div>
           </div>
@@ -317,7 +296,7 @@
           value : penghubung dengan label (via atribut for pada &lt;label&gt;)
         </li>
         <li>
-          placeholder : teks petunjuk yang tampil saat input masih kosong kosong
+          placeholder : teks petunjuk yang tampil saat input masih kosong
         </li>
         <li>required : menandakan input wajib diisi sebelum form disubmit</li>
         <li>
@@ -328,7 +307,7 @@
           min/max : batas minimum dan maximum untuk input angka atau tanggal
         </li>
         <li>
-          maxlength : batas maksimum jumlah karakter yang dapat di ketik/li>
+          maxlength : batas maksimum jumlah karakter yang dapat diketik
         </li>
       </ul>
 
@@ -503,52 +482,4 @@
             <td><code>controls</code></td>
             <td>audio, video</td>
             <td>
-              Menampilkan kontrol putar/jeda/volume pada browser[cite: 3].
-            </td>
-          </tr>
-          <tr>
-            <td><code>autoplay</code></td>
-            <td>audio, video</td>
-            <td>
-              Media langsung diputar saat halaman dibuka (sering diblokir
-              browser)[cite: 3].
-            </td>
-          </tr>
-          <tr>
-            <td><code>loop</code></td>
-            <td>audio, video</td>
-            <td>Media diputar berulang-ulang tanpa henti[cite: 3].</td>
-          </tr>
-          <tr>
-            <td><code>muted</code></td>
-            <td>audio, video</td>
-            <td>
-              Media dimulai tanpa suara (diperlukan jika pakai autoplay)[cite:
-              3].
-            </td>
-          </tr>
-          <tr>
-            <td><code>poster</code></td>
-            <td>video</td>
-            <td>
-              Gambar thumbnail yang tampil sebelum video diputar[cite: 3].
-            </td>
-          </tr>
-          <tr>
-            <td><code>width / height</code></td>
-            <td>video</td>
-            <td>Ukuran tampilan video dalam piksel[cite: 3].</td>
-          </tr>
-          <tr>
-            <td><code>preload</code></td>
-            <td>audio, video</td>
-            <td>
-              Mengatur apakah media di-load otomatis: none / metadata /
-              auto[cite: 3].
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </body>
-</html>
+              Menampilkan kontrol putar/jeda/volume pada browser
