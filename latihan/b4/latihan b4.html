@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>latihan b4 style css</title>
+    <link rel="stylesheet" href="latihan b4.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#tujuan">Tujuan</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#informasi">Informasi</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav> 
+
+    <header id="site-header">
+      <div class="judul">
+        <h1>BAB 4</h1>
+        <h2>Pengantar CSS Dan Dasar Styling</h2>
+      </div>
+    </header>
+      <br />
+    <main>
+      <section class="hero-objectives" id="tujuan">
+        <div class="div-objectives">
+          <h2>A. Tujuan pembelajaran</h2>
+          <p>
+            Setelah menyelesaikan kegiatan BAB ini, peserta didik diharapkan
+            mampu:
+          </p>
+          <ul>
+            <li>Menjelaskan konsep fungsi CSS dalam pembangunan halaman web</li>
+            <li>
+              Membedakan konsep tiga cara penulisan CSS: inline, internal, dan
+              external
+            </li>
+            <li>
+              Menggunakan selector CSS dasar (element, class, dan id) untuk
+              menarget elemen yang tepat
+            </li>
+            <li>
+              Menerapkan properti CSS unntuk mengatur tampilan teks, warna, dan
+              latar belakang
+            </li>
+            <li>
+              Memahami dan menggunakan berbagai satuan (unit) CSS dengan benar
+            </li>
+          </ul>
+        </div>
+      </section>
+      <br />
+      <section class="hero-materi" id="materi">
+        <div class="materi-satu">
+          <h2>B. Materi ringkas</h2>
+          <h3>B.1 Apa itu CSS?</h3>
+          <p class="materi-deskirsisatu">
+            CSS (Cascading Style Sheets) adalah bahasa yang di gunakan untuk
+            mengatur untuk tampilan dan gaya elemen-elemen HTML. jika HTML
+            adalah kerangka/struktur bangunan, maka CSS adalah cat, dekorasi,
+            dan tata letak ruangannya.
+          </p>
+        </div>
+        <div class="box-materisatu">
+          <p>
+            Tanpa CSS : Halaman web hanya menampilakn teks dan elemen polos
+            tampa warna, font, atau tata letak. Dengan CSS : Halaman web
+            memiliki warna, tipografi, layout, dan animasi dan tampilan yang
+            menarik.<br />
+
+            Cascading artinya aturan CSS diterapkan secaara berrtingkat - jika
+            ada konflik, aturan yang lebih spesifik atau yang di tulis terakhir
+            akan diutamakan.
+          </p>
+        </div>
+        <h3 class="materi-dua">B.2 Tiga Cara Menulis CSS</h3>
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="table-materidua"
+        >
+          <tr>
+            <th>Cara</th>
+            <th>Lokasi Penulisan</th>
+            <th>Kelebihan</th>
+            <th>kekurangan</th>
+          </tr>
+          <tr>
+            <td>Inline</td>
+            <td>Di dalam elemen HTML menggunakan atribut style</td>
+            <td>Mudah digunakan untuk styling cepat dan spesifik</td>
+            <td>
+              Sulit di pelihara, tidak bisa di gunakan ulang, mencampur HTML &
+              CSS
+            </td>
+          </tr>
+          <tr>
+            <td>Internal</td>
+            <td>
+              Di dalam tag &lt;style&gt; di bagian &lt;head&gt; dokumen HTML
+            </td>
+            <td>Cocok untuk 1 halamanm tidak butuh file tamabahan</td>
+            <td>Tidak bisa di gunakan di halaman lain</td>
+          </tr>
+          <tr>
+            <td>External</td>
+            <td>
+              Di dalam file CSS terpisah yang di hubungkan ke dokumen HTML
+            </td>
+            <td>
+              Mudah di pelihara, bisa di gunakan ulang, memisahkan HTML & CSS
+            </td>
+            <td>Butuh file tambahan, perlu koneksi untuk memuat file CSS</td>
+          </tr>
+        </table>
+        <br />
+        <div class="materi-deskripsidua">
+          <p>
+            Urutan Prioritas CSS (dari yang paling tinggi ke paling rendah):
+          </p>
+          <ol>
+            <li>Inline CSS -Prioritas tertinggi, selalu menimpa aturan lain</li>
+            <li>Internal CSS -Menimpa CSS eksternal jika ditulis setelahnya</li>
+            <li>
+              External CSS -Berlaku global untuk seluruh halaman yang
+              menautkannya
+            </li>
+            <li>
+              Browser Default -Gaya bawaan browser (paling rendah prioritasnya)
+            </li>
+          </ol>
+          <p>
+            Rekomendasi Gunakan CSS Eksternal untuk proyek nyata agar kode lebih
+            terorganisir
+          </p>
+        </div>
+        <br />
+        <h3 class="materi-tiga">B.3 Selector CSS Dasar</h3>
+        <p>Selector menentukan elemen HTML mana yang akan diberi gaya CSS.</p>
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="table-materitiga"
+        >
+          <tr>
+            <th>Selector</th>
+            <th>Sintaks</th>
+            <th>Contoh</th>
+            <th>Keterangan</th>
+          </tr>
+          <tr>
+            <td>Elemen</td>
+            <td>nama-tag</td>
+            <td>p { color: red; }</td>
+            <td>Menargetkan semua elemen dengan tag tersebut</td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td>.nama-class</td>
+            <td>.merah { background-color: red; }</td>
+            <td>Menargetkan elemen yang memiliki class tersebut</td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td>#nama-id</td>
+            <td>#header { font-size: 24px; }</td>
+            <td>Menargetkan satu elemen unik dengan ID tersebut</td>
+          </tr>
+          <tr>
+            <td>Universal</td>
+            <td>*</td>
+            <td>* { margin: 0; padding: 0; }</td>
+            <td>Menargetkan semua elemen di halaman</td>
+          </tr>
+          <tr>
+            <td>Grouping</td>
+            <td>tag1, tag2</td>
+            <td>p, h1 { color: blue; }</td>
+            <td>Menerapkan gaya yang sama ke beberapa selector sekaligus</td>
+          </tr>
+          <tr>
+            <td>Descendant</td>
+            <td>induk anak</td>
+            <td>div p { font-size: 14px; }</td>
+            <td>
+              menargetkan &lt;p&gt; yang berada di dalam elemen &lt;div&gt;
+            </td>
+          </tr>
+          <tr>
+            <td>Pseudo-class</td>
+            <td>selector:pseudo-class</td>
+            <td>a:hover { color: green; }</td>
+            <td>
+              Menargetkan elemen pada kondisi tertentu (hover, focus, dll)
+            </td>
+          </tr>
+        </table>
+        <br />
+        <table border="0" class="materi-deskripsitiga">
+          <p>Perbedaan Class vs ID :</p>
+          <tr>
+            <th>Class(.nama) :</th>
+            <th>
+              Bisa di gunakan pada BANYAK elemen berbeda dalam satu halaman.
+            </th>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Satu elemen juga bisa memiliki lebih dari satu class.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Contoh: <code>&lt;p class="merah"&gt;</code></td>
+          </tr>
+          <tr>
+            <td>ID(#nama) :</td>
+            <td>
+              Hanya bisa di gunakan pada SATU elemen unik dalam satu halaman.
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              Biasanya untuk elemen utama sepeerti #header, #footer, #main, dll.
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Juga dipakai untuk tautan anchor(#bagian)</td>
+          </tr>
+        </table>
+        <br />
+        <h2 class="materi-empat">B.4 Properti CSS untuk teks</h2>
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="table-materieempat"
+        >
+          <tr>
+            <th>Properti</th>
+            <th>Contoh Nilai</th>
+            <th>Fungasi</th>
+          </tr>
+          <tr>
+            <td>color</td>
+            <td>red, #ff0000, rgb(255, 0, 0)</td>
+            <td>Mengatur warna teks</td>
+          </tr>
+          <tr>
+            <td>font-family</td>
+            <td>Arial, Times New Roman, serif</td>
+            <td>Mengatur jenis font teks</td>
+          </tr>
+          <tr>
+            <td>font-size</td>
+            <td>12px, 1em, 100%</td>
+            <td>Mengatur ukuran font teks</td>
+          </tr>
+          <tr>
+            <td>font-weight</td>
+            <td>normal, bold, 700</td>
+            <td>Mengatur ketebalan font teks</td>
+          </tr>
+          <tr>
+            <td>font-style</td>
+            <td>normal, italic, oblique</td>
+            <td>gaya font teks (miring atau normal)</td>
+          </tr>
+          <tr>
+            <td>text-align</td>
+            <td>left/right/center/justify</td>
+            <td>Perantara teks</td>
+          </tr>
+          <tr>
+            <td>text-decoration</td>
+            <td>none, underline, line-through</td>
+            <td>Mengatur dekorasi teks (garis bawah, coret, dll)</td>
+          </tr>
+          <tr>
+            <td>text-transform</td>
+            <td>uppercase, lowercase, capitalize</td>
+            <td>Mengatur kapitalisasi teks</td>
+          </tr>
+          <tr>
+            <td>line-height</td>
+            <td>1.5, 150%, 2em</td>
+            <td>Mengatur jarak antar baris teks</td>
+          </tr>
+          <tr>
+            <td>letter-spacing</td>
+            <td>normal, 2px, 0.1em</td>
+            <td>Mengatur jarak antar huruf</td>
+          </tr>
+          <tr>
+            <td>word-spacing</td>
+            <td>normal, 4px, 0.2em</td>
+            <td>Mengatur jarak antar kata</td>
+          </tr>
+          <tr>
+            <td>text-shadow</td>
+            <td>none, 2px 2px 4px rgba(0, 0, 0, 0.5)</td>
+            <td>Mengatur bayangan teks</td>
+          </tr>
+          <tr>
+            <td>text-indent</td>
+            <td>2em, 20px</td>
+            <td>indentasi baris pertama teks</td>
+          </tr>
+          <tr>
+            <td>white-space</td>
+            <td>normal, nowrap, pre</td>
+            <td>teks di bungkus dan spasi di tangani</td>
+          </tr>
+        </table>
+        <br />
+
+        <h2 class="materi-lima">B.5 Penulisan Warna di CSS</h2>
+        <p>CSS mendukung beberapa format penulisan warna:</p>
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="table-materilima"
+        >
+          <tr>
+            <th>Format</th>
+            <th>Contoh</th>
+            <th>Keterangan</th>
+          </tr>
+          <tr>
+            <td>Nama Warna</td>
+            <td>red, blue, green</td>
+            <td>Hanya tersedia ~140 warna standar</td>
+          </tr>
+          <tr>
+            <td>Hexadecimal</td>
+            <td>#ff0000, #00ff00, #0000ff</td>
+            <td>
+              Format paling umum -6 digit heksadesimal (merah, hijau, biru)
+            </td>
+          </tr>
+          <tr>
+            <td>RGB</td>
+            <td>rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255)</td>
+            <td>Menentukan warna dengan nilai merah, hijau, biru (0-255)</td>
+          </tr>
+          <tr>
+            <td>RGBA</td>
+            <td>rgba(255, 0, 0, 0.5)</td>
+            <td>Seperti RGB, tapi dengan nilai alpha (transparansi) 0-1</td>
+          </tr>
+          <tr>
+            <td>HSL</td>
+            <td>hsl(0, 100%, 50%)</td>
+            <td>Menentukan warna dengan hue, saturation, lightness</td>
+          </tr>
+          <tr>
+            <td>HSLA</td>
+            <td>hsla(0, 100%, 50%, 0.5)</td>
+            <td>Seperti HSL, tapi dengan nilai alpha (transparansi) 0-1</td>
+          </tr>
+        </table>
+        <br />
+        <h2 class="materi-enam">B.6 Properti CSS untuk Latar Belakang</h2>
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="table-materienam"
+        >
+          <tr>
+            <th>Properti</th>
+            <th>Contoh Nilai</th>
+            <th>Fungsi</th>
+          </tr>
+          <tr>
+            <td>background-color</td>
+            <td>red, #ff0000, rgb(255, 0, 0)</td>
+            <td>Mengatur warna latar belakang elemen</td>
+          </tr>
+          <tr>
+            <td>background-image</td>
+            <td>url('image.jpg')</td>
+            <td>Mengatur gambar latar belakang elemen</td>
+          </tr>
+          <tr>
+            <td>background-repeat</td>
+            <td>repeat, no-repeat, repeat-x, repeat-y</td>
+            <td>Mengatur pengulangan gambar latar belakang</td>
+          </tr>
+          <tr>
+            <td>background-position</td>
+            <td>top left, center center, 50% 50%</td>
+            <td>Mengatur posisi gambar latar belakang</td>
+          </tr>
+          <tr>
+            <td>background-size</td>
+            <td>auto, cover, contain, 100px 200px</td>
+            <td>Mengatur ukuran gambar latar belakang</td>
+          </tr>
+          <tr>
+            <td>background-attachment</td>
+            <td>scroll, fixed, local</td>
+            <td>Mengatur apakah latar belakang ikut digulir atau tetap</td>
+          </tr>
+          <tr>
+            <td>background</td>
+            <td>(shorthand semua properti latar belakang)</td>
+            <td>Mengatur semua properti latar belakang sekaligus</td>
+          </tr>
+        </table>
+        <br />
+        <h2 class="materi-tujuh">B.7 Satuan (unit) dalam CSS</h2>
+        <p>
+          CSS menggunakan berbagai bagian untuk menentukan ukuran. Satuan di
+          bagi menjadi dua kelompok besar:
+        </p>
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="tablesatu-materitujuh"
+        >
+          <tr>
+            <th>Unit</th>
+            <th>Kepanjangan</th>
+            <th>Penggunaan</th>
+          </tr>
+          <tr>
+            <td>px</td>
+            <td>pixel</td>
+            <td>Unit absolut, 1px = 1 titik pada layar</td>
+          </tr>
+          <tr>
+            <td>pt</td>
+            <td>point</td>
+            <td>Unit absolut, 1pt = 1/72 inci</td>
+          </tr>
+          <tr>
+            <td>cm</td>
+            <td>centimeter</td>
+            <td>Unit absolut, 1cm = 1/2.54 inci</td>
+          </tr>
+          <tr>
+            <td>em</td>
+            <td>em</td>
+            <td>Unit relatif, 1em = ukuran font elemen induk</td>
+          </tr>
+        </table>
+        <br />
+        <table
+          border="1"
+          cellpading="8"
+          cellspacing="0"
+          class="tabledua-materitujuh"
+        >
+          <tr>
+            <th>Unit</th>
+            <th>Referensi</th>
+            <th>Contoh & Keterangan</th>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Ukuran elemen induk (parent)</td>
+            <td>Unit relatif, 1% = 1/100 dari ukuran elemen induk</td>
+          </tr>
+          <tr>
+            <td>em</td>
+            <td>Ukuran font elemen induk</td>
+            <td>Unit relatif, 1em = ukuran font elemen induk</td>
+          </tr>
+          <tr>
+            <td>rem</td>
+            <td>Ukuran font root (html)</td>
+            <td>Unit relatif, 1rem = ukuran font elemen root (&lt;html&gt;)</td>
+          </tr>
+          <tr>
+            <td>vw</td>
+            <td>Lebar viewport</td>
+            <td>Unit relatif, 1vw = 1% dari lebar viewport</td>
+          </tr>
+          <tr>
+            <td>vh</td>
+            <td>Tinggi viewport</td>
+            <td>Unit relatif, 1vh = 1% dari tinggi viewport</td>
+          </tr>
+          <tr>
+            <td>vmin</td>
+            <td>Lebar atau tinggi viewport (yang lebih kecil)</td>
+            <td>
+              Unit relatif, 1vmin = 1% dari lebar atau tinggi viewport (yang
+              lebih kecil)
+            </td>
+          </tr>
+          <tr>
+            <td>fr</td>
+            <td>Fraksi dari ruang tersedia</td>
+            <td>Unit relatif, digunakan dalam Grid Layout</td>
+          </tr>
+        </table>
+      </section>
+      <br />
+      <article class="hero-informasi" id="informasi">
+        <div class="informasi-satu">
+          <h2>Informasi</h2>
+          <p>
+            pembuatan halaman web ini di gunakan untuk melatih kemampuan dasar
+            dalam pembuatan halaman web, dan di gunakan untuk memahami konsep
+            HTML dan CSS dan melatih siswa unuk berpikir luas dan kreatif
+            dalam pembuatan halaman web, web ini juga di guanakn agar siswa
+            tidak bergantung pada AI secara berlebihan.
+          </p>
+        </div>
+      </article>
+      <br />
+      <footer class="hero-contact" id="contact">
+        <div class="contact-satu">
+          <h2>Contact</h2>
+          <p>
+            Jika ada pertanyaan atau masukan, silakan hubungi kami melalui
+            email: <a href="mailto:">contact@example.com</a>
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
